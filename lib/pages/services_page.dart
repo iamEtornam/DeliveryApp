@@ -23,26 +23,33 @@ class ServicesPage extends StatelessWidget {
         ],
       ),
       body: changeLayoutBloc.isGridLayout
-          ? ListView.builder(
-            itemCount: services.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                leading: Material(
-                  color: Colors.indigo,
-                  borderRadius: BorderRadius.circular(45),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Image.asset(services[index][3]),
+          ? ListView.separated(
+              itemCount: services.length,
+              separatorBuilder: (BuildContext context, int index) {
+                return Divider();
+              },
+              itemBuilder: (BuildContext context, int index) {
+                return ListTile(
+                  leading: Material(
+                    color: Colors.indigo,
+                    borderRadius: BorderRadius.circular(45),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        services[index][3],
+                        height: 37,
+                        width: 37,
+                      ),
+                    ),
                   ),
-                ),
-                title: Text(
-                  '${services[index][1]}',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text('${services[index][2]}',
-                    style: TextStyle(fontSize: 14, color: Colors.pink)),
-              );
-            })
+                  title: Text(
+                    '${services[index][1]}',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text('${services[index][2]}',
+                      style: TextStyle(fontSize: 14, color: Colors.pink)),
+                );
+              })
           : OrientationBuilder(builder: (context, orientation) {
               return GridView.builder(
                   padding: EdgeInsets.only(left: 8, right: 8),
@@ -57,7 +64,7 @@ class ServicesPage extends StatelessWidget {
                         margin: const EdgeInsets.all(8),
                         padding: EdgeInsets.all(15),
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
+                            color: Colors.grey.shade200.withOpacity(.5),
                             borderRadius: BorderRadius.circular(8)),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,7 +75,11 @@ class ServicesPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(45),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(services[index][3]),
+                                child: Image.asset(
+                                  services[index][3],
+                                  height: 35,
+                                  width: 35,
+                                ),
                               ),
                             ),
                             SizedBox(
