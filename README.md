@@ -31,11 +31,6 @@ Delivery App UI was designed by [**Fariz Al Faridli**](https://www.uplabs.com/al
     <td><img src="https://raw.githubusercontent.com/RegNex/DeliveryApp/master/screenshot/screenshot_2.png" width="200" height="400"/></td>
    
   </tr>
-    <tr>
-    <td><img align="left" src="https://raw.githubusercontent.com/RegNex/DeliveryApp/master/screenshot/screenshot_1.png" width="200" height="400"/></td>
-    <td><img src="https://raw.githubusercontent.com/RegNex/DeliveryApp/master/screenshot/screenshot_2.png" width="200" height="400"/></td>
-   
-  </tr>
   <tr>
    <td><p>Light</p></td>
       <td><p>Dark</p></td>
