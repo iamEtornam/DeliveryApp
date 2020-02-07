@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Deliver',
         theme: ThemeData(
-          brightness: Brightness.light,
+          brightness: Brightness.dark,
             fontFamily: GoogleFonts.lato().fontFamily,
             primarySwatch: Colors.indigo,
             appBarTheme: AppBarTheme(color: Colors.indigo,elevation: Platform.isIOS ? 0 : 4)),
